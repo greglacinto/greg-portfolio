@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import FullScreenSection from "./FullScreenSection";
 
+import '../styles/projectsSection.css';
+
 const projects = [
     {
         title: "Sydny dre",
@@ -40,10 +42,11 @@ const ProjectsSection = () => {
         >
             <Heading as="h1" id="projects-section" color="white" py={3}>Featured Projects</Heading>
             <Box
-                 display="grid"
-                 gridTemplateColumns="repeat(2,minmax(0,1fr))"
-                 gridGap={8}
-                 
+              id="project-section-grid"
+              display="grid"
+              gridTemplateColumns="repeat(1,minmax(0,1fr))"
+              gridGap={8}
+              
             >
                 {projects.map((project, i) => {
                     return (
