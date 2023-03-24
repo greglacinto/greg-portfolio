@@ -1,4 +1,4 @@
-import { Box, Heading, VStack } from "@chakra-ui/react";
+import { Box, Heading, VStack, HStack } from "@chakra-ui/react";
 import { Image, Text, Link } from "@chakra-ui/react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,7 +14,7 @@ const projects = [
     },
     {
         title: "Wedding site",
-        description: "A simple wedding app intending couples. Built with Reactjs and vanilla css 🔥️",
+        description: "A simple wedding app for intending couples. Built with Reactjs and vanilla css🔥️",
         imageSrc: () => require("../images/valandgreg-site.png"),
         url: 'https://valandgreg.netlify.app/'
     },
@@ -63,12 +63,12 @@ const ProjectsSection = () => {
                                     <Text fontSize="md">{project.description}</Text>
                                 </VStack>
                             </Box>
-                            <Box >
+                            <HStack py={3}>
                                 <Link href={project.url} isExternal>
                                   <Heading as="h6" size="xs">See more</Heading>
                                 </Link>
                                 <FontAwesomeIcon icon={faArrowRight} color='#080808' size="1x" />
-                            </Box>
+                            </HStack>
                         </Box>
                     )
                 })}
