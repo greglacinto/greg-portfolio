@@ -11,8 +11,7 @@ const LandingSection = () => {
 
     return (
         <FullScreenSection
-            backgroundColor="#2A4365"
-            isdarkbackground
+            backgroundColor="#ebedeb"
             justifyContent="center"
         >   
             
