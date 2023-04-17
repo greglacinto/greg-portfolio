@@ -7,8 +7,7 @@ import {
     faEnvelope, faBars, faXmark
 } from '@fortawesome/free-solid-svg-icons'
 import {
-    faGithub, faLinkedin, 
-    faStackOverflow, faMedium
+    faGithub, faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
 import '../styles/Header.css';
 
