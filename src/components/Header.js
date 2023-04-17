@@ -24,14 +24,6 @@ const socials = [
     {
         icon: faLinkedin,
         url: "https://linkedin.com/in/gregoryjs/"
-    },
-    {
-        icon: faMedium,
-        url: "https://medium.com/"
-    },
-    {
-        icon: faStackOverflow,
-        url: "https://stackoverflow.com/users/13700702/gregoryjs"
     }
 ]
 
