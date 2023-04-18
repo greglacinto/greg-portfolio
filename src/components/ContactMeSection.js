@@ -20,7 +20,7 @@ const ContactMeSection = () => {
           validateOnMount: true,
           firstName: '',
           email: '',
-          type: '',
+          type: 'Freelance project proposal',
           message: ''
         },
         validationSchema: Yup.object({

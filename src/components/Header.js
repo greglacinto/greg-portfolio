@@ -14,7 +14,7 @@ import '../styles/Header.css';
 const socials = [
     {
         icon: faEnvelope,
-        url: "greglacinto@gmail.com"
+        url: "mailto:greglacinto@gmail.com"
     },
     {
         icon: faGithub,
