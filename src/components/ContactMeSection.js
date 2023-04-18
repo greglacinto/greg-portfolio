@@ -54,7 +54,7 @@ const ContactMeSection = () => {
         <FullScreenSection
           isdarkbackground
           backgroundColor="#512DA8" 
-          w="80%"
+          w="60%"
           py={16}
           alignItems="flex-start"
         >
