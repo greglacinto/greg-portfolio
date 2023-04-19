@@ -96,8 +96,13 @@ const Header = () => {
                           {
                               socials.map((item, i) => {
                                   return (
-                                      <ListItem listStyleType='none' key={i}>
-                                          <Link href={item.url} isExternal>
+                                      <ListItem 
+                                      listStyleType='none' key={i}
+                                      className="header-onHover"
+                                      >
+                                          <Link 
+                                            href={item.url} isExternal 
+                                          >
                                               <FontAwesomeIcon icon={item.icon} />
                                           </Link>
                                       </ListItem>
@@ -112,8 +117,8 @@ const Header = () => {
               <nav>
                   <UnorderedList>
                       <HStack spacing={5}>
-                        <button onClick={handleClick("projects")}>Projects</button>
-                        <button onClick={handleClick("contactme")}>Contact Me</button>
+                        <button className="header-onHover"onClick={handleClick("projects")}>Projects</button>
+                        <button className="header-onHover"onClick={handleClick("contactme")}>Contact Me</button>
                       </HStack>
                   </UnorderedList>
               </nav>
@@ -144,8 +149,8 @@ const Header = () => {
             <nav>
                   <UnorderedList>
                       <VStack spacing={5} paddingTop={6}>
-                        <button onClick={handleClick("projects")}>Projects</button>
-                        <button onClick={handleClick("contactme")}>Contact Me</button>
+                        <button className="header-onHover" onClick={handleClick("projects")}>Projects</button>
+                        <button className="header-onHover" onClick={handleClick("contactme")}>Contact Me</button>
                       </VStack>
                   </UnorderedList>
             </nav>
@@ -161,7 +166,10 @@ const Header = () => {
                   {
                     socials.map((item, i) => {
                       return (
-                        <ListItem listStyleType='none' key={i}>
+                        <ListItem 
+                          listStyleType='none' key={i}
+                          className="header-onHover"  
+                        >
                           <Link href={item.url} isExternal>
                             <FontAwesomeIcon icon={item.icon} />
                           </Link>
