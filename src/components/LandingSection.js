@@ -29,9 +29,6 @@ const LandingSection = () => {
             <VStack>
               <Avatar src = "https://res.cloudinary.com/diyms5sde/image/upload/c_scale,h_334/v1681922847/portfolio/avatar_zjs3ir.png" size="2x"></Avatar>
             </VStack>
-            
-            
-            
         </HStack>
     )
 }
