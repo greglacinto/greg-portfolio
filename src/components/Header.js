@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { UnorderedList, ListItem, Link, Box, HStack, VStack, Text} from "@chakra-ui/react";
+import { UnorderedList, ListItem, Link, Box, HStack, VStack, Text, Divider} from "@chakra-ui/react";
 // import { HamburgerIcon, CloseIcon} from '@chakra-ui/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faBars } from '@fortawesome/sharp-regular-svg-icons'
@@ -33,14 +33,14 @@ const Header = () => {
   let previousPosition = useRef(0);
   let [direction, setDirection] = useState("");
   const [isToggle, setToggle] = useState(false);
+  const [toggleColor, setToggleColor] = useState('black');
 
   const handleClick = (anchor) => () =>  {
     if (anchor.includes('-')){
       anchor = anchor.slice(0, anchor.indexOf('-'));
-      setToggle(false);
     }
-    
-    console.log(window.innerWidth)
+
+    handleToggle();
     const query = anchor+"-section";
     const element = document.getElementById(query);
     if (element) {
@@ -51,13 +51,20 @@ const Header = () => {
     }
   };
 
+  const handleToggle = () => {
+    setToggle(!isToggle);
+    const mobileMenu = document.querySelector('.sm-screen-display');
+    mobileMenu.classList.toggle('is-active');
+    
+  };
+
   useEffect(() => {
     const updatePosition = () => {
       const currentPosition = window.pageYOffset;
+      currentPosition > 760 ? setToggleColor('white') : setToggleColor('black');
       setDirection(currentPosition > previousPosition.current ? "down" : "up");
       previousPosition.current = currentPosition > 0 ? currentPosition : 0;
     };
-
 
     window.addEventListener(
       "scroll", updatePosition
@@ -69,14 +76,7 @@ const Header = () => {
     }
   }, []);
 
-  const handleToggle = () => {
-    setToggle(!isToggle);
-    console.log(isToggle)
-    const mobileMenu = document.querySelector('.sm-screen-display');
-    mobileMenu.classList.toggle('is-active');
-    console.log(mobileMenu)
-    
-  };
+  
 
     return (
       <>
@@ -143,6 +143,7 @@ const Header = () => {
           <span className="toggle-box-icon toggle-box-effect">
             <FontAwesomeIcon 
             icon={isToggle ? faXmark : faBars} 
+            style={{color: toggleColor}}
             onClick={handleToggle}/>
           </span>
         </Box>  
@@ -153,17 +154,18 @@ const Header = () => {
           <nav>
                 <UnorderedList>
                     <VStack 
-                      spacing={10} 
+                      spacing={12} 
                       paddingTop={6}
                       fontSize='2em'
                     >
                       <button className="header-onHover" onClick={handleClick("projects-smClose")}>Projects</button>
                       <button className="header-onHover" onClick={handleClick("contactme-smClose")}>Contact Me</button>
+                      <Divider width='80%' orientation='horizontal' />
                       {
                         socials.map((item, i) => {
                           return (
                             <button 
-                              listStyleType='none' key={i}
+                              key={i}
                               className="header-onHover"  
                             >
                               <Link href={item.url} isExternal 

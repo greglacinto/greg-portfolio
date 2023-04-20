@@ -31,7 +31,9 @@
 
 .toggle-box-icon{
   margin-right: 1rem;
-  float: right;
+  position: fixed;
+  right: 0;
+  top: 10px;
 }
 
 .header-onHover{
