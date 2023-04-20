@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { UnorderedList, ListItem, Link, Box, HStack, VStack} from "@chakra-ui/react";
+import { UnorderedList, ListItem, Link, Box, HStack, VStack, Text} from "@chakra-ui/react";
 // import { HamburgerIcon, CloseIcon} from '@chakra-ui/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faBars } from '@fortawesome/sharp-regular-svg-icons'
@@ -14,15 +14,18 @@ import '../styles/Header.css';
 const socials = [
     {
         icon: faEnvelope,
-        url: "mailto:greglacinto@gmail.com"
+        url: "mailto:greglacinto@gmail.com",
+        name: "Email"
     },
     {
         icon: faGithub,
-        url: "https://github.com/greglacinto/"
+        url: "https://github.com/greglacinto/",
+        name: "Github"
     },
     {
         icon: faLinkedin,
-        url: "https://linkedin.com/in/gregoryjs/"
+        url: "https://linkedin.com/in/gregoryjs/",
+        name: "LinkedIn"
     }
 ]
 
@@ -32,6 +35,11 @@ const Header = () => {
   const [isToggle, setToggle] = useState(false);
 
   const handleClick = (anchor) => () =>  {
+    if (anchor.includes('-')){
+      anchor = anchor.slice(0, anchor.indexOf('-'));
+      setToggle(false);
+    }
+    
     console.log(window.innerWidth)
     const query = anchor+"-section";
     const element = document.getElementById(query);
@@ -43,17 +51,13 @@ const Header = () => {
     }
   };
 
-  const handleToggle = () => {
-    setToggle(!isToggle);
-    console.log(isToggle)
-  }
-
   useEffect(() => {
     const updatePosition = () => {
       const currentPosition = window.pageYOffset;
       setDirection(currentPosition > previousPosition.current ? "down" : "up");
       previousPosition.current = currentPosition > 0 ? currentPosition : 0;
     };
+
 
     window.addEventListener(
       "scroll", updatePosition
@@ -64,6 +68,15 @@ const Header = () => {
       )
     }
   }, []);
+
+  const handleToggle = () => {
+    setToggle(!isToggle);
+    console.log(isToggle)
+    const mobileMenu = document.querySelector('.sm-screen-display');
+    mobileMenu.classList.toggle('is-active');
+    console.log(mobileMenu)
+    
+  };
 
     return (
       <>
@@ -125,63 +138,46 @@ const Header = () => {
             </HStack>
           </Box>            
         </Box>
-
+        
+        <Box>
+          <span className="toggle-box-icon toggle-box-effect">
+            <FontAwesomeIcon 
+            icon={isToggle ? faXmark : faBars} 
+            onClick={handleToggle}/>
+          </span>
+        </Box>  
+    
         <Box
-          id="sm-screen-display"
-          display="block"
-          top={0}
-          left={0}
-          right={0}
-          position="fixed"
-          zIndex={20}
-          paddingRight={4}
-          backgroundColor="#18181b"
-          color="white"
-          opacity={0.9}
-        >
-          <Box float="right">
-            <FontAwesomeIcon icon={isToggle ? faXmark : faBars} onClick={handleToggle}/>
-          </Box>
-          
-          <Box
-            display={isToggle ? "block" : "none"}
-          >
-            <nav>
-                  <UnorderedList>
-                      <VStack spacing={5} paddingTop={6}>
-                        <button className="header-onHover" onClick={handleClick("projects")}>Projects</button>
-                        <button className="header-onHover" onClick={handleClick("contactme")}>Contact Me</button>
-                      </VStack>
-                  </UnorderedList>
-            </nav>
-
-            <nav>
-              <UnorderedList>
-                <HStack
-                  py={6}
-                  alignItems="center"
-                  justifyContent="space-around"
-                  spacing={0}
-                >
-                  {
-                    socials.map((item, i) => {
-                      return (
-                        <ListItem 
-                          listStyleType='none' key={i}
-                          className="header-onHover"  
-                        >
-                          <Link href={item.url} isExternal>
-                            <FontAwesomeIcon icon={item.icon} />
-                          </Link>
-                        </ListItem>
-                      )
-                    })
-                  }
-                    
-                </HStack>
-              </UnorderedList>
-            </nav>
-          </Box>
+          className="sm-screen-display"          
+        >          
+          <nav>
+                <UnorderedList>
+                    <VStack 
+                      spacing={10} 
+                      paddingTop={6}
+                      fontSize='2em'
+                    >
+                      <button className="header-onHover" onClick={handleClick("projects-smClose")}>Projects</button>
+                      <button className="header-onHover" onClick={handleClick("contactme-smClose")}>Contact Me</button>
+                      {
+                        socials.map((item, i) => {
+                          return (
+                            <button 
+                              listStyleType='none' key={i}
+                              className="header-onHover"  
+                            >
+                              <Link href={item.url} isExternal 
+                                onClick={handleClick("link-smClose")}
+                              >
+                                <Text>{item.name}</Text>
+                              </Link>
+                            </button>
+                          )
+                        })
+                      }
+                    </VStack>
+                </UnorderedList>
+          </nav>
         </Box>
        
 
