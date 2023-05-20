@@ -1,4 +1,4 @@
-import { Box, Heading, VStack, HStack, AspectRatio } from "@chakra-ui/react";
+import { Box, Heading, VStack, HStack } from "@chakra-ui/react";
 import { Image, Text, Link } from "@chakra-ui/react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
