@@ -1,49 +1,17 @@
-import { Box, Heading, VStack, HStack } from "@chakra-ui/react";
-import { Image, Text, Link } from "@chakra-ui/react";
+import { Box, Heading, VStack, HStack, Image } from "@chakra-ui/react";
+import { Text, Link } from "@chakra-ui/react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import FullScreenSection from "./FullScreenSection";
 
 import '../styles/projectsSection.css';
-import { useEffect } from "react";
-
-const projects = [
-    {
-        title: "Contact Book",
-        description: "A simple contact book Angular app",
-        features: "|Angular signals | Angular effect | Bootstrap | tyescript | Vanilla CSS | Input Decorator|",
-        type: "video",
-        imageSrc: () => require("../images/contact-book.mp4"),
-        url: '#'
-    },
-    {
-        title: "Wedding site",
-        description: "A simple wedding app for intending couples. Built with Reactjs and vanilla css.",
-        features: "React UseState | React UseEffect | 3d-corousel package | conditionally rendered components | State lifting",
-        type: "image",
-        imageSrc: () => require("../images/valandgreg-site.png"),
-        url: 'https://valandgreg.netlify.app/'
-    }
-    
-]
+import projects from '../data/project.js'
 
 
 
 const ProjectsSection = () => {
 
-  // video autoplay on hover
-  useEffect(() => {
-    document.getElementById("portfolio-vid").addEventListener("mouseover", function() {
-      this.play();
-    });
-    
-    document.getElementById("portfolio-vid").addEventListener("mouseleave",function() {
-    this.pause();
-    });
-  })
-
-  
 
   return (
     <FullScreenSection
@@ -62,8 +30,6 @@ const ProjectsSection = () => {
       >
         {projects.map((project, i) => {
           return (
-            
-
             <Box 
               w="80%" mx="auto"
               key={i}
@@ -74,26 +40,28 @@ const ProjectsSection = () => {
               className="item-onHover"
             >
               <Box>
-                <VStack  alignItems="flex-start">
-                  <Box >                
-                    { project.type === "image" ? 
-                      <Image rounded="xl" src={project.imageSrc()}/> :
-                      <video id= "portfolio-vid" loop muted >
-                        <source
-                          src={project.imageSrc()}
-                          type="video/mp4"
-                        />
-                      </video>
-                    }
+                <VStack  alignItems="flex-start">  
+                  <Box id="box">
+                    <Image 
+                      className='project-img'
+                      src={project.imageSrc} 
+                      alt='project image'
+                    />
                   </Box>
-                  <Heading as="h4" size="md">{project.title}</Heading>
-                  <Text fontSize="md">{project.description}</Text>
-                  <Text fontSize="md" fontWeight="bold">{project.features}</Text>
+                  
+                  <Box>
+                    <Heading as="h2" size="md" py={2}>{project.title}</Heading>
+                    <Text fontSize="sm" py={2}>{project.description}</Text>
+                    <Text fontSize="xs" fontWeight="bold">{project.features}</Text>
+                  </Box>
                 </VStack>
               </Box>
-              <HStack py={3}>
+              <HStack py={2}>
                   <Link href={project.url} isExternal>
-                    <Heading as="h6" size="xs">See Live</Heading>
+                    <Heading as="h6" size="xs">Live site</Heading>
+                  </Link>
+                  <Link href={project.url} isExternal>
+                    <Heading as="h6" size="xs">Github Repo</Heading>
                   </Link>
                   <FontAwesomeIcon icon={faArrowRight} color='#080808' size="1x" />
               </HStack>
