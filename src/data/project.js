@@ -6,7 +6,7 @@ const projects = [
     features: "| Angular signals | Angular effect | Bootstrap | tyescript | Vanilla CSS | Input Decorator |",
     imageSrc: "https://res.cloudinary.com/diyms5sde/image/upload/v1685958110/portfolio/site%20images/contactbook_zo3okq.png",
     url: 'https://crudcontactbook.netlify.app/',
-    gitbub: 'https://github.com/greglacinto/contact-book'
+    github: 'https://github.com/greglacinto/contact-book'
   },
   {
     id: 'wedding-site',

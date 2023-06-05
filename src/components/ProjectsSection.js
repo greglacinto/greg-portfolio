@@ -1,4 +1,4 @@
-import { Box, Heading, VStack, HStack, Image } from "@chakra-ui/react";
+import { Box, Heading, VStack, HStack, Image, Divider } from "@chakra-ui/react";
 import { Text, Link } from "@chakra-ui/react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -52,7 +52,7 @@ const ProjectsSection = () => {
                   <Box>
                     <Heading as="h2" size="md" py={2}>{project.title}</Heading>
                     <Text fontSize="sm" py={2}>{project.description}</Text>
-                    <Text fontSize="xs" fontWeight="bold">{project.features}</Text>
+                    <Text fontSize="xs" fontWeight="">{project.features}</Text>
                   </Box>
                 </VStack>
               </Box>
@@ -60,7 +60,10 @@ const ProjectsSection = () => {
                   <Link href={project.url} isExternal>
                     <Heading as="h6" size="xs">Live site</Heading>
                   </Link>
-                  <Link href={project.url} isExternal>
+                  <FontAwesomeIcon icon={faArrowRight} color='#080808' size="1x" />
+              </HStack>
+              <HStack py={2}>
+              <Link href={project.github} isExternal>
                     <Heading as="h6" size="xs">Github Repo</Heading>
                   </Link>
                   <FontAwesomeIcon icon={faArrowRight} color='#080808' size="1x" />
