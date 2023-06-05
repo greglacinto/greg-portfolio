@@ -1,4 +1,4 @@
-import { Box, Heading, VStack, HStack, Image, Divider } from "@chakra-ui/react";
+import { Box, Heading, VStack, HStack, Image } from "@chakra-ui/react";
 import { Text, Link } from "@chakra-ui/react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
