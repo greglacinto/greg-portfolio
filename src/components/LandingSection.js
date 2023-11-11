@@ -2,7 +2,11 @@ import { Avatar, Box, Button, Flex, VStack, Text, HStack} from "@chakra-ui/react
 import Typewriter from 'typewriter-effect';
 import '../styles/landing-section.css';
 
-const greeting = "Hello, I'm Gregory";
+const greetHello = "Hello, I'm "
+const name = '<span style="color: red;">Gregory</span>'
+const greeting = greetHello + name
+// const greeting = "Hello, I'm Gregory";
+
 const bio1 = "I'm a professional Software Engineer. We create amazing web applications, backend APIs and automate business processes.";
 
 const toolbox = [
@@ -23,6 +27,7 @@ const LandingSection = () => {
         >               
             <VStack className="bio-box">
               <Text
+                className="m-greeting"
                 fontSize='2em'
                 fontWeight="bold"
               >
@@ -46,7 +51,6 @@ const LandingSection = () => {
                 alignItems="center"
                 justifyContent="center"
               >
-                <Text fontSize='2em'>Tools: </Text>
                 <Flex 
                   flexWrap="wrap"
                   width="70%"
@@ -55,8 +59,10 @@ const LandingSection = () => {
                     return (
                       <Button 
                         borderRadius={7}
-                        border='2px'
-                        borderColor="#00ffff"
+                        border='1px'
+                        borderColor="#244D61"
+                        boxShadow="0 0 5px #244D61"
+                        // box-shadow: ;
                         key={i}
                         mx={2}
                         my={2}

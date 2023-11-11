@@ -12,6 +12,9 @@
   .toolbox{
     margin: 0;
   }
+  .m-greeting {
+    margin-top: 0;
+  }
 }
 
 .avatar-box{
@@ -24,4 +27,8 @@
 
 .toolbox{
   margin: 1em 0 !important;
+}
+
+.m-greeting {
+  margin-top: 1rem;
 }
