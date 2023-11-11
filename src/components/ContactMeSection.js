@@ -52,8 +52,7 @@ const ContactMeSection = () => {
 
     return (
         <FullScreenSection
-          isdarkbackground
-          backgroundColor="#512DA8" 
+          backgroundColor="white" 
           w="60%"
           py={16}
           alignItems="flex-start"
@@ -111,7 +110,8 @@ const ContactMeSection = () => {
                         <Button 
                           type="submit" 
                           w="100%" 
-                          colorScheme="purple"
+                          colorScheme="red"
+                          color="white"
                           disabled={!(formik.isValid && formik.dirty)}    
                         >
                             {isLoading? "Sending..." : "send"}
