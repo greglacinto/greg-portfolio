@@ -2,13 +2,13 @@ import { Avatar, Box, Button, Flex, VStack, Text, HStack} from "@chakra-ui/react
 import Typewriter from 'typewriter-effect';
 import '../styles/landing-section.css';
 
-const greeting = "Hello, I am Gregory";
-const bio1 = "A fullstack Developer";
+const greeting = "Hello, I'm Gregory";
+const bio1 = "I'm a professional Software Engineer. We create amazing web applications, backend APIs and automate business processes.";
 
 const toolbox = [
-  'Angular 9+', 'Bootstrap css', 'Chakra UI', 
-  'Javascript', 'PL/SQL', 'React js',
-  'Spring Boot',  'Vanilla CSS'
+  'Javascript', 'T-SQL', 'Vanilla CSS', 'Bootstrap css', 
+  'Angular 9+', 'React js', 'Chakra UI', 
+  'nodeJs',  'nestJs', 'nextjs', 
 ]
 
 const LandingSection = () => {
@@ -34,7 +34,12 @@ const LandingSection = () => {
                   }}
                 />
               </Text>
-              <Text fontSize='2em'>{bio1}</Text>
+              <Text 
+                fontSize='1em'
+                px={20}
+              >
+                {bio1}
+              </Text>
               
               <HStack
                 className="toolbox"
@@ -67,7 +72,7 @@ const LandingSection = () => {
             </VStack>
 
             <Box className="avatar-box">
-              <Avatar src = "https://res.cloudinary.com/diyms5sde/image/upload/c_scale,h_334/v1681922847/portfolio/avatar_zjs3ir.png" size="2x"></Avatar>
+              <Avatar src = {process.env.REACT_APP_LP_IMG_URL} size="2px"></Avatar>
             </Box>
         </Flex>
     )
