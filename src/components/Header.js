@@ -4,7 +4,7 @@ import { UnorderedList, ListItem, Link, Box, HStack, VStack, Text, Divider} from
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faBars } from '@fortawesome/sharp-regular-svg-icons'
 import { 
-    faEnvelope, faBars, faXmark, faArrowUp
+    faEnvelope, faBars, faXmark
 } from '@fortawesome/free-solid-svg-icons'
 import {
     faGithub, faLinkedin

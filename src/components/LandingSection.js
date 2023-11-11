@@ -19,13 +19,13 @@ const LandingSection = () => {
     return (
         <Flex 
           className="flex"
-          pt={20}
+          pt={0}
           minHeight="100vh"
           flexDirection='column'
           justifyContent="space-around"
           alignItems="center"
         >               
-            <VStack className="bio-box">
+            <VStack className="bio-box sm-space-item-top">
               <Text
                 className="m-greeting"
                 fontSize='2em'
@@ -77,7 +77,7 @@ const LandingSection = () => {
 
             </VStack>
 
-            <Box className="avatar-box">
+            <Box className="avatar-box sm-space-item-btm">
               <Avatar src = {process.env.REACT_APP_LP_IMG_URL} size="2px"></Avatar>
             </Box>
         </Flex>
