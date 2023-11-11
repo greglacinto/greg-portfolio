@@ -4,7 +4,7 @@ import { UnorderedList, ListItem, Link, Box, HStack, VStack, Text, Divider} from
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faBars } from '@fortawesome/sharp-regular-svg-icons'
 import { 
-    faEnvelope, faBars, faXmark
+    faEnvelope, faBars, faXmark, faArrowUp
 } from '@fortawesome/free-solid-svg-icons'
 import {
     faGithub, faLinkedin
@@ -62,6 +62,7 @@ const Header = () => {
     const updatePosition = () => {
       const currentPosition = window.pageYOffset;
       currentPosition > 760 ? setToggleColor('white') : setToggleColor('black');
+    
       setDirection(currentPosition > previousPosition.current ? "down" : "up");
       previousPosition.current = currentPosition > 0 ? currentPosition : 0;
     };
@@ -82,7 +83,7 @@ const Header = () => {
       <>
         <span id="home-section"></span>
         <Box
-          position={direction === "down" ? "absolute" : "fixed"}
+          // position={direction === "down" ? "absolute" : "fixed"}
           top={0}
           left={0}
           right={0}
@@ -90,8 +91,6 @@ const Header = () => {
           transitionProperty="transform"
           transitionDuration=".3s"
           transitionTimingFunction="ease-in-out"
-          // backgroundColor="#18181b"
-          color="black"
         >
           <Box
             id="lg-screen-navbar"
@@ -128,19 +127,19 @@ const Header = () => {
                     </UnorderedList>
                 </nav>
 
-                <nav>
+                <HStack>
                     <UnorderedList>
                         <HStack   
                         spacing={10} 
                         fontWeight="bold"
                         >
-                          <button 
+                          {/* <button 
                           onClick={handleClick("home")}
                           >
                             <Text className="rtv-btn" textColor="red">
                               Home
                             </Text>
-                          </button>
+                          </button> */}
                           <button 
                           onClick={handleClick("projects")}
                           >
@@ -153,7 +152,20 @@ const Header = () => {
                           </button>
                         </HStack>
                     </UnorderedList>
-                </nav>
+
+                    <Box>
+                    <span className="up-icon">
+                      <button 
+                      onClick={handleClick("home")}
+                      >
+                        <Text className="rtv-btn" textColor="red">
+                          Home
+                        </Text>
+                      </button>
+                    </span>
+                    </Box>
+                </HStack>
+
             </HStack>
           </Box>            
         </Box>
@@ -165,6 +177,8 @@ const Header = () => {
             style={{color: toggleColor}}
             onClick={handleToggle}/>
           </span>
+
+          
         </Box>  
     
         <Box

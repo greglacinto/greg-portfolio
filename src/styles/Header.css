@@ -6,6 +6,15 @@
   .sm-screen-display{
     display: none;
   }
+  .toggle-box-icon{
+    display: none;
+  }
+  .up-icon{
+    margin-right: 1rem;
+    position: fixed;
+    right: 0;
+    top: 10px;
+  }
 
 }
 
@@ -104,4 +113,6 @@
   margin: 10px auto;
   
 }
+
+
 
