@@ -80,6 +80,7 @@ const Header = () => {
 
     return (
       <>
+        <span id="home-section"></span>
         <Box
           position={direction === "down" ? "absolute" : "fixed"}
           top={0}
@@ -89,52 +90,70 @@ const Header = () => {
           transitionProperty="transform"
           transitionDuration=".3s"
           transitionTimingFunction="ease-in-out"
-          backgroundColor="#18181b"
-          color="white"
+          // backgroundColor="#18181b"
+          color="black"
         >
           <Box
             id="lg-screen-navbar"
             display="none"
           >
-          <HStack 
-              justifyContent="space-around"
-              py={3}
-            >
-              <nav>
-                  <UnorderedList>
-                      <HStack
-                          justifyContent="space-around"
-                          spacing={6}
-                      >
-                          {
-                              socials.map((item, i) => {
-                                  return (
-                                      <ListItem 
-                                      listStyleType='none' key={i}
-                                      className="header-onHover"
-                                      >
-                                          <Link 
-                                            href={item.url} isExternal 
-                                          >
-                                              <FontAwesomeIcon icon={item.icon} />
-                                          </Link>
-                                      </ListItem>
-                                  )
-                              })
-                          }
-                          
-                      </HStack>
-                  </UnorderedList>
-              </nav>
+            <HStack 
+                justifyContent="space-around"
+                py={3}
+              >
+                <nav>
+                    <UnorderedList>
+                        <HStack
+                            justifyContent="space-around"
+                            spacing={6}
+                        >
+                            {
+                                socials.map((item, i) => {
+                                    return (
+                                        <ListItem 
+                                        listStyleType='none' key={i}
+                                        className="social"
+                                        >
+                                            <Link 
+                                              href={item.url} isExternal 
+                                            >
+                                                <FontAwesomeIcon icon={item.icon} />
+                                            </Link>
+                                        </ListItem>
+                                    )
+                                })
+                            }
+                            
+                        </HStack>
+                    </UnorderedList>
+                </nav>
 
-              <nav>
-                  <UnorderedList>
-                      <HStack spacing={5}>
-                        <button className="header-onHover"onClick={handleClick("projects")}>Projects</button>
-                        <button className="header-onHover"onClick={handleClick("contactme")}>Contact Me</button>
-                      </HStack>
-                  </UnorderedList>
-              </nav>
+                <nav>
+                    <UnorderedList>
+                        <HStack   
+                        spacing={10} 
+                        fontWeight="bold"
+                        >
+                          <button 
+                          onClick={handleClick("home")}
+                          >
+                            <Text className="rtv-btn" textColor="red">
+                              Home
+                            </Text>
+                          </button>
+                          <button 
+                          onClick={handleClick("projects")}
+                          >
+                            <Text className="rtv-btn">Projects</Text>
+                          </button>
+                          <button 
+                          onClick={handleClick("contactme")}
+                          >
+                            <Text className="rtv-btn">Contact</Text>
+                          </button>
+                        </HStack>
+                    </UnorderedList>
+                </nav>
             </HStack>
           </Box>            
         </Box>
@@ -158,6 +177,7 @@ const Header = () => {
                       paddingTop={6}
                       fontSize='2em'
                     >
+                      <button className="header-onHover" onClick={handleClick("home-smClose")}>Home</button>
                       <button className="header-onHover" onClick={handleClick("projects-smClose")}>Projects</button>
                       <button className="header-onHover" onClick={handleClick("contactme-smClose")}>Contact Me</button>
                       <Divider width='80%' orientation='horizontal' />
