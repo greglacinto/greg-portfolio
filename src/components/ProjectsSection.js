@@ -9,7 +9,6 @@ import '../styles/projectsSection.css';
 import projects from '../data/project.js'
 
 
-
 const ProjectsSection = () => {
 
 
@@ -20,6 +19,7 @@ const ProjectsSection = () => {
       p={8}
       alignItems="flex-start"
     >
+      
       <Heading as="h1" id="projects-section" color="white" py={3}>Featured Projects</Heading>
       <Box
         id="project-section-grid"

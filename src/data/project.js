@@ -16,6 +16,15 @@ const projects = [
     imageSrc: "https://res.cloudinary.com/diyms5sde/image/upload/v1685952336/portfolio/site%20images/valandgreg-site_jzxyqe.png",
     url: 'https://valandgreg.netlify.app/',
     github: 'https://github.com/greglacinto/v-g'
+  },
+  {
+    id: 'foot-place',
+    title: "Foot Place",
+    description: "A e-commerce website. Built with nextjs and tailwind.",
+    features: "| Server Components | Typescript | Fast Refresh | Caching |",
+    imageSrc: "https://res.cloudinary.com/diyms5sde/image/upload/v1702385048/portfolio/foot-place_iyjnlv.png",
+    url: 'https://moore-foot.netlify.app/',
+    github: 'https://github.com/greglacinto/foot-place'
   }
   
 ]

@@ -5,9 +5,8 @@ import '../styles/landing-section.css';
 const greetHello = "Hello, I'm "
 const name = '<span style="color: red;">Gregory</span>'
 const greeting = greetHello + name
-// const greeting = "Hello, I'm Gregory";
 
-const bio1 = "I'm a professional Software Engineer. We create amazing web applications, backend APIs and automate business processes.";
+const bio1 = "I'm a professional Software Engineer. I create amazing web applications, backend APIs and automate business processes.";
 
 const toolbox = [
   'Javascript', 'T-SQL', 'Vanilla CSS', 'Bootstrap css', 
