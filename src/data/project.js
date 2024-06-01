@@ -1,21 +1,21 @@
 const projects = [
   {
-    id: 'cotact-book',
-    title: "Contact Book",
-    description: "A simple contact book with CRUD operation",
-    features: "| Angular signals | Angular effect | Bootstrap | tyescript | Vanilla CSS | Input Decorator |",
-    imageSrc: "https://res.cloudinary.com/diyms5sde/image/upload/v1685958110/portfolio/site%20images/contactbook_zo3okq.png",
-    url: 'https://crudcontactbook.netlify.app/',
-    github: 'https://github.com/greglacinto/contact-book'
+    id: 'student-serve',
+    title: "Student Serve",
+    description: "A platform where students can book appointments with service providers covered in their insurance package",
+    features: "| Nextjs | Google Calender | Tyescript | Tailwind |",
+    imageSrc: "https://res.cloudinary.com/diyms5sde/image/upload/v1717281156/portfolio/site%20images/student-serve_q0awyf.png",
+    url: 'https://student-serve.netlify.app/',
+    // github: 'https://github.com/greglacinto/student-serve'
   },
   {
-    id: 'wedding-site',
-    title: "Wedding site",
-    description: "A simple wedding app for intending couples. Built with Reactjs and vanilla css.",
-    features: "| React UseState | React UseEffect | 3d-corousel package | conditionally rendered components | State lifting |",
-    imageSrc: "https://res.cloudinary.com/diyms5sde/image/upload/v1685952336/portfolio/site%20images/valandgreg-site_jzxyqe.png",
-    url: 'https://valandgreg.netlify.app/',
-    github: 'https://github.com/greglacinto/v-g'
+    id: 'loc-market',
+    title: "LocMarket",
+    description: "An ecommerce platform to link customers to locally made products",
+    features: "| Nextjs | React-ChartJs | Typescript | Tailwind |",
+    imageSrc: "https://res.cloudinary.com/diyms5sde/image/upload/v1717280903/portfolio/site%20images/image_2024-06-01_182822595_lunpld.png",
+    url: 'https://locmarket-web-git-main-anyas-projects-76cc820d.vercel.app/seller/dashboard',
+    // github: ''
   },
   {
     id: 'foot-place',
@@ -24,7 +24,7 @@ const projects = [
     features: "| Server Components | Typescript | Fast Refresh | Caching |",
     imageSrc: "https://res.cloudinary.com/diyms5sde/image/upload/v1702385048/portfolio/foot-place_iyjnlv.png",
     url: 'https://moore-foot.netlify.app/',
-    github: 'https://github.com/greglacinto/foot-place'
+    // github: 'https://github.com/greglacinto/foot-place'
   }
   
 ]

@@ -56,18 +56,20 @@ const ProjectsSection = () => {
                   </Box>
                 </VStack>
               </Box>
-              <HStack py={2}>
-                  <Link href={project.url} isExternal>
-                    <Heading as="h6" size="xs">Live site</Heading>
-                  </Link>
-                  <FontAwesomeIcon icon={faArrowRight} color='#080808' size="1x" />
-              </HStack>
-              <HStack py={2}>
-              <Link href={project.github} isExternal>
-                    <Heading as="h6" size="xs">Github Repo</Heading>
-                  </Link>
-                  <FontAwesomeIcon icon={faArrowRight} color='#080808' size="1x" />
-              </HStack>
+              {
+                // if Id equals loc-market, don't show div
+                project.id !== 'loc-market' && (
+                    <>
+                        <HStack py={2}>
+                            <Link href={project.url} isExternal>
+                            <Heading as="h6" size="xs">Live site</Heading>
+                            </Link>
+                            <FontAwesomeIcon icon={faArrowRight} color='#080808' size="1x" />
+                        </HStack>
+                    </>
+                )
+              }
+              
             </Box>
           )
         })}
