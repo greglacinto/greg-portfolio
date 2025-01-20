@@ -16,24 +16,17 @@ interface Project {
 const projects: Project[] = [
   {
     name: "Accupuncture and Herbs",
-    description: "A web platform for a local acupuncturist to receive appointment bookings and display their services.",
+    description: "A web platform for a local acupuncturist to receive appointment bookings and display their services. This project was built using Next.js, Tailwind CSS, and TypeScript. Integrations were made to google calendar for bookings and google maps for location services.",
     image: process.env.NEXT_PUBLIC_FULL_STACK_1 || '',
     link: "https://acupunctureandherbaltreatment.com",
     category: 'fullstack'
   },
   {
     name: "FRED",
-    description: "An e-commerce platform for local farmers to sell their products online.",
+    description: "An e-commerce platform for local farmers to sell their products online. This layered architecture was built using Next.js, Node js, AWS RDS. Integrations were made to Stripe for payment processing, Cloudinary for image storage and Ably for real-time notifications.",
     image: process.env.NEXT_PUBLIC_FULL_STACK_2 || '',
     link: "https://fred-frontend.vercel.app",
     category: 'fullstack'
-  },
-  {
-    name: "Project Name",
-    description: "You can also add in this description the type of the project, if it was for web, mobile, data analysis",
-    image: "/project3.jpg",
-    link: "/projects/3",
-    category: 'data'
   },
 ]
 
@@ -53,8 +46,8 @@ export default function Projects() {
             onClick={() => setActiveCategory('fullstack')}
             className={`text-lg font-medium pb-2 border-b-2 transition-colors ${
               activeCategory === 'fullstack' 
-                ? 'border-aqua text-aqua' 
-                : 'border-transparent hover:text-aqua'
+                ? 'border-teal text-teal' 
+                : 'border-transparent hover:text-teal'
             }`}
           >
             Full-stack
@@ -63,8 +56,8 @@ export default function Projects() {
             onClick={() => setActiveCategory('data')}
             className={`text-lg font-medium pb-2 border-b-2 transition-colors ${
               activeCategory === 'data' 
-                ? 'border-aqua text-aqua' 
-                : 'border-transparent hover:text-aqua'
+                ? 'border-teal text-teal' 
+                : 'border-transparent hover:text-teal'
             }`}
           >
             Data
@@ -73,6 +66,9 @@ export default function Projects() {
 
         {/* Projects Stack */}
         <div className="w-3/4 mx-auto space-y-8">
+          {filteredProjects.length === 0 && (
+            <p className="text-center text-gray-600">Coming Soon!</p>
+          )}
           {filteredProjects.map((project, index) => (
             <div 
               key={index} 
@@ -88,7 +84,7 @@ export default function Projects() {
                   <div>
                     <Link 
                       href={project.link}
-                      className="inline-block px-6 py-3 border-2 border-aqua text-aqua rounded-lg hover:bg-aqua hover:text-white transition-colors"
+                      className="inline-block px-6 py-3 border-2 border-teal text-teal rounded-lg hover:bg-teal hover:text-white transition-colors"
                     >
                       View Project
                     </Link>

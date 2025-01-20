@@ -29,7 +29,7 @@ export default function Hero() {
     <section className="min-h-screen pt-32 pb-16 px-4 flex items-center relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-aqua/10 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-teal/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl" />
       </div>
 
@@ -37,19 +37,19 @@ export default function Hero() {
         {/* Left Column - Content */}
         <div className="space-y-8">
           <div className="space-y-2">
-            <p className="text-aqua font-medium flex items-center space-x-2">
-              <span className="w-2 h-2 bg-aqua rounded-full animate-pulse" />
+            <p className="text-teal font-medium flex items-center space-x-2">
+              <span className="w-2 h-2 bg-teal rounded-full animate-pulse" />
               <span>Welcome to my digital space</span>
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-              Hi, I'm Gregory Odiase
+              Hi, I&apos;m Gregory Odiase
             </h1>
             <div className="h-12 flex items-center">
               <p className="text-xl text-gray-600 typing-text">
-                I'm a{' '}
-                <span className="text-aqua font-medium">
+                I&apos;m a{' '}
+                <span className="text-teal font-medium">
                   {displayedRole}
-                  <span className="inline-block w-0.5 h-5 bg-aqua animate-blink ml-1" />
+                  <span className="inline-block w-0.5 h-5 bg-teal animate-blink ml-1" />
                 </span>
               </p>
             </div>
@@ -57,13 +57,13 @@ export default function Hero() {
 
           <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
             Passionate about crafting efficient solutions and turning complex problems 
-            into elegant code. Let's build something extraordinary together.
+            into elegant code. Let&apos;s build something extraordinary together.
           </p>
 
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
             <Link
               href="#projects"
-              className="px-8 py-4 bg-aqua text-white rounded-lg hover:bg-aqua-dark transition-colors text-center
+              className="px-8 py-4 bg-teal text-white rounded-lg hover:bg-teal-dark transition-colors text-center
                 relative overflow-hidden group"
             >
               <span className="relative z-10">View My Work</span>
@@ -72,7 +72,7 @@ export default function Hero() {
             </Link>
             <Link
               href="#"
-              className="px-8 py-4 border-2 border-aqua text-aqua rounded-lg hover:bg-aqua/10 
+              className="px-8 py-4 border-2 border-teal text-teal rounded-lg hover:bg-teal/10 
                 transition-colors text-center group"
             >
               Get in Touch
@@ -88,7 +88,7 @@ export default function Hero() {
                 <span
                   key={tech}
                   className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm
-                    hover:bg-aqua/10 hover:text-aqua transition-colors cursor-default"
+                    hover:bg-teal/10 hover:text-teal transition-colors cursor-default"
                 >
                   {tech}
                 </span>
@@ -99,7 +99,7 @@ export default function Hero() {
 
         {/* Right Column - Decorative Elements */}
         <div className="relative hidden lg:block">
-          <div className="absolute inset-0 bg-gradient-to-br from-aqua/20 to-purple-500/20 rounded-full blur-2xl" />
+          <div className="absolute inset-0 bg-gradient-to-br from-teal/20 to-purple-500/20 rounded-full blur-2xl" />
           <div className="relative">
             {/* Code snippet decoration */}
             <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg max-w-md mx-auto
@@ -108,9 +108,9 @@ export default function Hero() {
                 <code className="text-gray-800">
                   <span className="text-purple-600">const</span>{' '}
                   <span className="text-blue-600">developer</span> = {'{'}<br />
-                  &nbsp;&nbsp;name: <span className="text-green-600">"Gregory"</span>,<br />
-                  &nbsp;&nbsp;type: <span className="text-green-600">"Full Stack"</span>,<br />
-                  &nbsp;&nbsp;loves: [<span className="text-green-600">"coding"</span>, <span className="text-green-600">"coffee"</span>],<br />
+                  &nbsp;&nbsp;name: <span className="text-green-600">&quot;Gregory&quot;</span>,<br />
+                  &nbsp;&nbsp;type: <span className="text-green-600">&quot;Full Stack&quot;</span>,<br />
+                  &nbsp;&nbsp;loves: [<span className="text-green-600">&quot;coding&quot;</span>, <span className="text-green-600">&quot;coffee&quot;</span>],<br />
                   &nbsp;&nbsp;isOpenToWork: <span className="text-orange-600">true</span><br />
                   {'}'};
                 </code>
