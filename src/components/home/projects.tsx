@@ -46,8 +46,8 @@ export default function Projects() {
             onClick={() => setActiveCategory('fullstack')}
             className={`text-lg font-medium pb-2 border-b-2 transition-colors ${
               activeCategory === 'fullstack' 
-                ? 'border-teal text-teal' 
-                : 'border-transparent hover:text-teal'
+                ? 'border-primary text-primary' 
+                : 'border-transparent hover:text-primary'
             }`}
           >
             Full-stack
@@ -56,8 +56,8 @@ export default function Projects() {
             onClick={() => setActiveCategory('data')}
             className={`text-lg font-medium pb-2 border-b-2 transition-colors ${
               activeCategory === 'data' 
-                ? 'border-teal text-teal' 
-                : 'border-transparent hover:text-teal'
+                ? 'border-primary text-primary' 
+                : 'border-transparent hover:text-primary'
             }`}
           >
             Data
@@ -84,7 +84,7 @@ export default function Projects() {
                   <div>
                     <Link 
                       href={project.link}
-                      className="inline-block px-6 py-3 border-2 border-teal text-teal rounded-lg hover:bg-teal hover:text-white transition-colors"
+                      className="inline-block px-6 py-3 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors"
                     >
                       View Project
                     </Link>

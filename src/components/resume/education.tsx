@@ -25,18 +25,18 @@ export default function Education() {
       <div className="space-y-8">
         {education.map((edu, index) => (
           <div key={index} className="group relative bg-white rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <div className="absolute left-0 top-0 h-full w-1 bg-teal rounded-l-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute left-0 top-0 h-full w-1 bg-primary rounded-l-lg opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="space-y-2">
               <h3 className="text-xl font-bold text-gray-900">{edu.degree}</h3>
               <div className="flex flex-wrap items-center gap-x-3 text-gray-600">
                 <span>{edu.school}</span>
-                <span className="text-teal">•</span>
+                <span className="text-primary">•</span>
                 <span>{edu.period}</span>
               </div>
               <ul className="mt-3 space-y-1 text-gray-500">
                 {edu.highlights.map((highlight, idx) => (
                   <li key={idx} className="flex items-center">
-                    <span className="w-1.5 h-1.5 bg-teal rounded-full mr-2" />
+                    <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
                     {highlight}
                   </li>
                 ))}

@@ -57,8 +57,8 @@ export default function Skills() {
             onClick={() => setActiveCategory(category.name)}
             className={`px-4 py-2 rounded-lg transition-colors ${
               activeCategory === category.name
-                ? 'bg-teal text-white'
-                : 'bg-gray-100 text-gray-600 hover:bg-teal/10'
+                ? 'bg-primary text-white'
+                : 'bg-gray-100 text-gray-600 hover:bg-primary/10'
             }`}
           >
             {category.name}
@@ -74,11 +74,11 @@ export default function Skills() {
             <div key={index} className="group">
               <div className="flex justify-between mb-2">
                 <span className="font-medium text-gray-700">{skill.name}</span>
-                <span className="text-teal">{skill.level}%</span>
+                <span className="text-primary">{skill.level}%</span>
               </div>
               <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                 <div 
-                  className="h-full bg-teal rounded-full transition-all duration-500 ease-out group-hover:opacity-80"
+                  className="h-full bg-primary rounded-full transition-all duration-500 ease-out group-hover:opacity-80"
                   style={{ width: `${skill.level}%` }}
                 />
               </div>
