@@ -17,6 +17,11 @@ module.exports = {
           DEFAULT: '#244D61',
           light: '#2E6075',
           dark: '#1A3A4A',
+        },
+        primary: {
+          DEFAULT: '#5B21B6', // Royal Purple
+          light: '#7C3AED', // Lighter purple
+          dark: '#4C1D95', // Darker purple
         }
       }
     },

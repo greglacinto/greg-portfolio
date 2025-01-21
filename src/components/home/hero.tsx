@@ -29,7 +29,7 @@ export default function Hero() {
     <section className="min-h-screen pt-32 pb-16 px-4 flex items-center relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-teal/10 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl" />
       </div>
 
@@ -37,8 +37,8 @@ export default function Hero() {
         {/* Left Column - Content */}
         <div className="space-y-8">
           <div className="space-y-2">
-            <p className="text-teal font-medium flex items-center space-x-2">
-              <span className="w-2 h-2 bg-teal rounded-full animate-pulse" />
+            <p className="text-primary font-medium flex items-center space-x-2">
+              <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
               <span>Welcome to my digital space</span>
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
@@ -47,9 +47,9 @@ export default function Hero() {
             <div className="h-12 flex items-center">
               <p className="text-xl text-gray-600 typing-text">
                 I&apos;m a{' '}
-                <span className="text-teal font-medium">
+                <span className="text-primary font-medium">
                   {displayedRole}
-                  <span className="inline-block w-0.5 h-5 bg-teal animate-blink ml-1" />
+                  <span className="inline-block w-0.5 h-5 bg-primary animate-blink ml-1" />
                 </span>
               </p>
             </div>
@@ -63,7 +63,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
             <Link
               href="#projects"
-              className="px-8 py-4 bg-teal text-white rounded-lg hover:bg-teal-dark transition-colors text-center
+              className="px-8 py-4 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors text-center
                 relative overflow-hidden group"
             >
               <span className="relative z-10">View My Work</span>
@@ -72,7 +72,7 @@ export default function Hero() {
             </Link>
             <Link
               href="#"
-              className="px-8 py-4 border-2 border-teal text-teal rounded-lg hover:bg-teal/10 
+              className="px-8 py-4 border-2 border-primary text-primary rounded-lg hover:bg-primary/10 
                 transition-colors text-center group"
             >
               Get in Touch
@@ -88,7 +88,7 @@ export default function Hero() {
                 <span
                   key={tech}
                   className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm
-                    hover:bg-teal/10 hover:text-teal transition-colors cursor-default"
+                    hover:bg-primary/10 hover:text-primary transition-colors cursor-default"
                 >
                   {tech}
                 </span>
@@ -99,7 +99,7 @@ export default function Hero() {
 
         {/* Right Column - Decorative Elements */}
         <div className="relative hidden lg:block">
-          <div className="absolute inset-0 bg-gradient-to-br from-teal/20 to-purple-500/20 rounded-full blur-2xl" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-full blur-2xl" />
           <div className="relative">
             {/* Code snippet decoration */}
             <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg max-w-md mx-auto

@@ -51,16 +51,16 @@ export default function Experience() {
         {experiences.map((exp, index) => (
           <div key={index} className="group relative">
             {/* Timeline dot */}
-            <div className="absolute -left-4 mt-3 w-3 h-3 bg-teal rounded-full" />
+            <div className="absolute -left-4 mt-3 w-3 h-3 bg-primary rounded-full" />
             {/* Timeline line */}
             <div className="absolute -left-3 mt-6 w-0.5 h-full bg-gray-200 group-last:hidden" />
             
             <div className="pl-8">
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-4">
                 <h3 className="text-xl font-bold">{exp.title}</h3>
-                <span className="text-teal">•</span>
+                <span className="text-primary">•</span>
                 <span className="text-lg text-gray-600">{exp.company}</span>
-                <span className="text-teal">•</span>
+                <span className="text-primary">•</span>
                 <span className="text-gray-500">{exp.period}</span>
               </div>
               <ul className="list-disc list-inside space-y-2 text-gray-600">
