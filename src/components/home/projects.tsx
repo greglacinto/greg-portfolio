@@ -25,7 +25,7 @@ const projects: Project[] = [
     name: "FRED",
     description: "An e-commerce platform for local farmers to sell their products online. This layered architecture was built using Next.js, Node js, AWS RDS. Integrations were made to Stripe for payment processing, Cloudinary for image storage and Ably for real-time notifications.",
     image: process.env.NEXT_PUBLIC_FULL_STACK_2 || '',
-    link: "https://fred-frontend.vercel.app",
+    link: "https://findatfred.com",
     category: 'fullstack'
   },
 ]
@@ -65,7 +65,7 @@ export default function Projects() {
         </div>
 
         {/* Projects Stack */}
-        <div className="w-3/4 mx-auto space-y-8">
+        <div className="w-full lg:w-3/4 mx-auto space-y-8 ">
           {filteredProjects.length === 0 && (
             <p className="text-center text-gray-600">Coming Soon!</p>
           )}

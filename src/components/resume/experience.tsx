@@ -65,7 +65,10 @@ export default function Experience() {
               </div>
               <ul className="list-disc list-inside space-y-2 text-gray-600">
                 {exp.responsibilities.map((resp, idx) => (
-                  <li key={idx}>{resp}</li>
+                  <li 
+                    key={idx}
+                    className="text-justify"
+                  >{resp}</li>
                 ))}
               </ul>
             </div>
