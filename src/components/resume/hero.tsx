@@ -22,7 +22,7 @@ export default function ResumeHero() {
 
         <div className="space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold">Resume</h1>
-          <p className="text-xl text-gray-600 max-w-2xl">
+          <p className="text-xl text-gray-600 max-w-2xl text-justify">
             Motivated software developer with degrees in computer science and Data Analysis for Business. 
             Proficient in full-stack development with a passion for creating impactful solutions.
           </p>

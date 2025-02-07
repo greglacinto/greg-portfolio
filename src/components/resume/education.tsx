@@ -35,7 +35,7 @@ export default function Education() {
               </div>
               <ul className="mt-3 space-y-1 text-gray-500">
                 {edu.highlights.map((highlight, idx) => (
-                  <li key={idx} className="flex items-center">
+                  <li key={idx} className="flex items-center text-justify">
                     <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2" />
                     {highlight}
                   </li>
