@@ -28,6 +28,13 @@ const projects: Project[] = [
     link: "https://findatfred.com",
     category: 'fullstack'
   },
+  {
+    name: "Transit Windsor Service Analysis",
+    description: "A data analysis project that breaks down responses from a survey about the Windsor Transit Commission. The data was sourced from a short survey that was sent out to the public. The data was cleaned and processed using Python and the results were visualized using Power BI.",
+    image: process.env.NEXT_PUBLIC_DATA_1 || '',
+    link: "https://github.com/greglacinto/data_projects/tree/main/analysis/Transit_Windsor_Service_Analysis",
+    category: 'data'
+  },
 ]
 
 export default function Projects() {
@@ -74,9 +81,9 @@ export default function Projects() {
               key={index} 
               className="bg-white rounded-lg overflow-hidden shadow-lg"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-2">
-                {/* Content - Left side on desktop, top on mobile */}
-                <div className="order-2 lg:order-1 p-8 lg:p-12 flex flex-col justify-center">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                {/* Content - Spanning 7 columns on desktop */}
+                <div className="order-2 lg:order-1 lg:col-span-7 p-8 lg:p-12 flex flex-col justify-center">
                   <h3 className="text-2xl font-bold mb-4">{project.name}</h3>
                   <p className="text-gray-600 mb-6 text-justify leading-relaxed">
                     {project.description}
@@ -91,14 +98,15 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* Image - Right side on desktop, bottom on mobile */}
-                <div className="order-1 lg:order-2 relative w-full h-64 lg:h-auto">
+                {/* Image - Spanning 5 columns on desktop */}
+                <div className="order-1 lg:order-2 lg:col-span-5 relative w-full h-80 lg:h-full">
                   <Image
                     src={project.image}
                     alt={project.name}
                     layout="fill"
-                    objectFit="contain"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    objectFit="cover" // Ensures the image fills its area beautifully
+                    className="rounded-lg shadow-lg"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
                   />
                 </div>
               </div>
